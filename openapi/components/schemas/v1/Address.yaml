@@ -8,10 +8,13 @@ properties:
     format: uuid
   line1:
     type: string
+    maxLength: 100
   line2:
     type: string
+    maxLength: 100
   line3:
     type: string
+    maxLength: 100
   country:
     enum:
       - IND
