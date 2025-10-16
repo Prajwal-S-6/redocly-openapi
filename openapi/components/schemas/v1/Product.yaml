@@ -11,6 +11,9 @@ properties:
     type: string
   category:
     type: string
+  price:
+    type: number
+    format: double
   dateCreated:
     type: string
     format: date-time
