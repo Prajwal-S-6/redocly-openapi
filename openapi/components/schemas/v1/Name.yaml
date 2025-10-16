@@ -4,7 +4,9 @@ required:
   - lastName
 properties:
   prefix:
-    type: string
+    type:
+      - string
+      - 'null'
     description: prefix for the customer name
     example: Mr.
   firstName:

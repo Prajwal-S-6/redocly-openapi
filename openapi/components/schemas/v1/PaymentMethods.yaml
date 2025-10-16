@@ -9,6 +9,7 @@ properties:
   id:
     type: string
     format: uuid
+    readOnly: true
   displayName:
     type: string
   cardNumber:

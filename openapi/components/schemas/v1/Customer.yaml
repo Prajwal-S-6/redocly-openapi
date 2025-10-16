@@ -16,11 +16,13 @@ properties:
   billToAddress:
     $ref: 'Address.yaml'
   email:
-    type: string
+    type: [string, 'null']
     format: email
     example: test@gmail.com
   phoneNumber:
-    type: number
+    type:
+     - number
+     - 'null'
     format: int64
     maxLength: 10
   paymentMethods:

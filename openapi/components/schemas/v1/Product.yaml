@@ -1,14 +1,20 @@
 type: object
 required:
   - name
+  - price
 properties:
   id:
     type: string
     format: uuid
+    readOnly: true
   name:
     type: string
+    example: Toy
   description:
-    type: string
+    type:
+     - string
+     - 'null'
+    maxLength: 1000
   category:
     type: string
   price:
