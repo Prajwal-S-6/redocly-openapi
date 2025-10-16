@@ -1,0 +1,14 @@
+type: object
+properties:
+  prefix:
+    type: string
+    description: prefix for the customer name
+    example: Mr.
+  firstName:
+    type: string
+    description: Customer first name
+    example: Prajwal
+  lastName:
+    type: string
+    description: Customer last name
+    example: S

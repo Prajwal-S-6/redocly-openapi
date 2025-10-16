@@ -1,0 +1,21 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  name:
+    $ref: 'Name.yaml'
+  shipToAddress:
+    $ref: 'Address.yaml'
+  billToAddress:
+    $ref: 'Address.yaml'
+  email:
+    type: string
+    format: email
+  phoneNumber:
+    type: number
+    format: int64
+  paymentMethods:
+    type: array
+    items:
+      $ref: 'PaymentMethods.yaml'

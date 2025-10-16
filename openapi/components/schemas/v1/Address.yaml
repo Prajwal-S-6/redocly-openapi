@@ -1,0 +1,20 @@
+type: object
+required:
+    - line1
+    - line2
+properties:
+  id:
+    type: string
+    format: uuid
+  line1:
+    type: string
+  line2:
+    type: string
+  line3:
+    type: string
+  country:
+    enum:
+      - IND
+      - USA
+      - RSA
+      - JPN
