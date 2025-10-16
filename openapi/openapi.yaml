@@ -27,21 +27,7 @@ tags:
     description: "Example operations for retrieving information."
   - name: Tag
     description: "This is a tag description."
-x-tagGroups:
-  - name: General
-    tags:
-      - User
-      - Info
-      - Echo
-  - name: Administration
-    tags:
-      - Admin
 servers:
-  - url: https://{tenant}/api/v1
-    variables:
-      tenant:
-        default: www
-        description: Your tenant id
   - url: https://example.com/api/v1
 paths:
   '/users/{username}':
