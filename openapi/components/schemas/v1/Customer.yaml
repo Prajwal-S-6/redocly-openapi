@@ -15,6 +15,7 @@ properties:
   phoneNumber:
     type: number
     format: int64
+    maxLength: 10
   paymentMethods:
     type: array
     items:

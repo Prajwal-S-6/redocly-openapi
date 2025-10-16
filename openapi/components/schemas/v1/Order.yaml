@@ -1,0 +1,29 @@
+type: object
+required:
+  - id
+properties:
+  id:
+    type: string
+    format: uuid
+  customer:
+    $ref: 'Customer.yaml'
+  shipToAddress:
+    $ref: 'Address.yaml'
+  billToAddress:
+    $ref: 'Address.yaml'
+  orderStatus:
+    enum:
+      - CREATED
+      - CLOSED
+  shipmentInfo:
+    type: string
+  orderLines:
+    type: array
+    items:
+      $ref: 'ProductsList.yaml'
+  dateCreated:
+    type: string
+    format: date-time
+  dateUpdated:
+    type: string
+    format: date-time
