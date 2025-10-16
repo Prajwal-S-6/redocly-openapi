@@ -1,3 +1,12 @@
 # Dir for bundles
 dist
 node_modules
+.idea
+/.idea/copilot.data.migration.agent.xml
+/.idea/copilot.data.migration.ask.xml
+/.idea/copilot.data.migration.ask2agent.xml
+/.idea/copilot.data.migration.edit.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/redocly.iml
+/.idea/vcs.xml
