@@ -1,0 +1,19 @@
+get:
+  description: Get all products
+  summary: Get List of all products
+  operationId: getAllProducts
+  tags:
+    - Product
+  responses:
+    '200':
+      description: Get Products
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/v1/ProductsList.yaml'
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/Problem.yaml'

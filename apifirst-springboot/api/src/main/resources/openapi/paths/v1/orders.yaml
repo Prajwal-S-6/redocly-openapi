@@ -1,0 +1,19 @@
+get:
+  operationId: getOrders
+  summary: Get all orders
+  description: get list of all orders
+  tags:
+    - Order
+  responses:
+    '200':
+      description: Orders retrieved
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/v1/OrderList.yaml'
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/Problem.yaml'

@@ -1,0 +1,83 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: Redocly OpenAPI first with SpringBoot
+  termsOfService: https://example.com/terms/
+  contact:
+    name: Contact our support
+    email: contact@example.com
+    url: http://example.com/contact
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  x-logo:
+    url: 'https://redocly.github.io/openapi-template/logo.png'
+    altText: OpenAPI example logo
+externalDocs:
+  description: "Find out how to create a GitHub repo for your OpenAPI definition."
+  url: 'https://github.com/Redocly/create-openapi-repo'
+tags:
+  - name: Customer
+    description: "Example Customer operations."
+  - name: User
+    description: "Example actions on user accounts."
+  - name: Product
+    description: "Example product operations."
+  - name: Order
+    description: "Example Order operations."
+servers:
+  - url: https://example.com/api/v1
+paths:
+  '/users/{username}':
+    $ref: 'paths/users_username.yaml'
+  '/v1/customers':
+    $ref: 'paths/v1/customer.yaml'
+  '/v1/customers/{customerId}':
+    $ref: 'paths/v1/customers_customerId.yaml'
+  '/v1/products':
+    $ref: 'paths/v1/products.yaml'
+  '/v1/products/{productId}':
+    $ref: 'paths/v1/products_productId.yaml'
+  '/v1/orders':
+    $ref: 'paths/v1/orders.yaml'
+  '/v1/orders/{orderId}':
+    $ref: 'paths/v1/orders_orderId.yaml'
+security:
+  - basic_auth: []
+components:
+  securitySchemes:
+    main_auth:
+      description: "Example description text of the OAuth2 scheme."
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: http://example.com/api/oauth/dialog
+          scopes:
+            'read:users': read user info
+            'write:users': modify or remove users
+    api_key:
+      description: "Example description text of the API key scheme."
+      type: apiKey
+      in: header
+      name: api_key
+    basic_auth:
+      type: http
+      scheme: basic
+webhooks:
+  userInfo:
+    post:
+      summary: New user webhook
+      description: "Information about a new user in the system."
+      operationId: userInfo
+      tags:
+        - Info
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: 'components/schemas/User.yaml'
+      responses:
+        '200':
+          description: "Successfully retrieved information about a new user."
+      security:
+        - api_key: []

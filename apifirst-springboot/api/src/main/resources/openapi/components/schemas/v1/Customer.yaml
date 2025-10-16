@@ -1,0 +1,31 @@
+type: object
+required:
+  - name
+  - shipToAddress
+  - billToAddress
+  - paymentMethods
+properties:
+  id:
+    type: string
+    format: uuid
+    readOnly: true
+  name:
+    $ref: 'Name.yaml'
+  shipToAddress:
+    $ref: 'Address.yaml'
+  billToAddress:
+    $ref: 'Address.yaml'
+  email:
+    type: [string, 'null']
+    format: email
+    example: test@gmail.com
+  phoneNumber:
+    type:
+     - number
+     - 'null'
+    format: int64
+    maxLength: 10
+  paymentMethods:
+    type: array
+    items:
+      $ref: 'PaymentMethods.yaml'

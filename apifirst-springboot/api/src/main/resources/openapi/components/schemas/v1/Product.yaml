@@ -1,0 +1,26 @@
+type: object
+required:
+  - name
+  - price
+properties:
+  id:
+    type: string
+    format: uuid
+    readOnly: true
+  name:
+    type: string
+    example: Toy
+  description:
+    type:
+     - string
+     - 'null'
+    maxLength: 1000
+  category:
+    type: string
+  price:
+    type: number
+    format: double
+  dateCreated:
+    $ref: 'DateTime.yaml'
+  dateUpdated:
+    $ref: 'DateTime.yaml'

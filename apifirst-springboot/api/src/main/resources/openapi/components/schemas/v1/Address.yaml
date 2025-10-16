@@ -1,0 +1,30 @@
+type: object
+required:
+    - line1
+    - line2
+    - country
+properties:
+  id:
+    type: string
+    format: uuid
+    readOnly: true
+  line1:
+    type: string
+    maxLength: 100
+    example: 123 Main
+  line2:
+    type: string
+    maxLength: 100
+    example: Baker street
+  line3:
+    type:
+     - string
+     - 'null'
+    maxLength: 100
+    example: London
+  country:
+    enum:
+      - IND
+      - USA
+      - RSA
+      - JPN
