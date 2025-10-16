@@ -2,6 +2,7 @@ type: object
 required:
     - line1
     - line2
+    - country
 properties:
   id:
     type: string

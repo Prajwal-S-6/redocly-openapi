@@ -1,4 +1,9 @@
 type: object
+required:
+  - name
+  - shipToAddress
+  - billToAddress
+  - paymentMethods
 properties:
   id:
     type: string
