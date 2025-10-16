@@ -17,6 +17,7 @@ properties:
   email:
     type: string
     format: email
+    example: test@gmail.com
   phoneNumber:
     type: number
     format: int64

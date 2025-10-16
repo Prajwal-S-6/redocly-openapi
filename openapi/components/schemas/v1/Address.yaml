@@ -10,12 +10,15 @@ properties:
   line1:
     type: string
     maxLength: 100
+    example: 123 Main
   line2:
     type: string
     maxLength: 100
+    example: Baker street
   line3:
     type: string
     maxLength: 100
+    example: London
   country:
     enum:
       - IND
