@@ -2,6 +2,8 @@ get:
   description: Get product
   summary: Get product by id
   operationId: getProductById
+  tags:
+    - Product
   parameters:
     - name: productId
       required: true

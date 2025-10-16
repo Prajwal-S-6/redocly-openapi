@@ -2,6 +2,8 @@ get:
   description: Get order
   summary: Get order by id
   operationId: getOrderById
+  tags:
+    - Order
   parameters:
     - name: orderId
       required: true

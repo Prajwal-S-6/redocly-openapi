@@ -2,6 +2,8 @@ get:
   description: Get all products
   summary: Get List of all products
   operationId: getAllProducts
+  tags:
+    - Product
   responses:
     '200':
       description: Get Products
