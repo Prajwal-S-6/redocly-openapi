@@ -9,7 +9,8 @@ get:
       required: true
       description: customer id
       schema:
-        type: integer
+        type: string
+        format: uuid
 
   responses:
     '200':
