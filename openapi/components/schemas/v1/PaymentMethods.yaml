@@ -21,8 +21,6 @@ properties:
   cvv:
     type: integer
   dateCreated:
-    type: string
-    format: date-time
+    $ref: 'DateTime.yaml'
   dateUpdated:
-    type: string
-    format: date-time
+    $ref: 'DateTime.yaml'

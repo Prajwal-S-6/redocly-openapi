@@ -21,8 +21,6 @@ properties:
     type: number
     format: double
   dateCreated:
-    type: string
-    format: date-time
+    $ref: 'DateTime.yaml'
   dateUpdated:
-    type: string
-    format: date-time
+    $ref: 'DateTime.yaml'
