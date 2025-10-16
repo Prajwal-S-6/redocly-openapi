@@ -1,0 +1,22 @@
+type: object
+required:
+  - name
+properties:
+  id:
+    type: string
+    format: uuid
+  name:
+    type: string
+  description:
+    type: string
+  category:
+    type: string
+  price:
+    type: number
+    format: double
+  dateCreated:
+    type: string
+    format: date-time
+  dateUpdated:
+    type: string
+    format: date-time
