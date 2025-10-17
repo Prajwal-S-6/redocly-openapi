@@ -35,7 +35,7 @@ public class ProductRepositoryImpl implements ProductRepository {
 
     @Override
     public Iterable<GetAllProducts200ResponseInner> findAll() {
-        return null;
+        return savedProductList;
     }
 
     @Override

@@ -14,14 +14,18 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
+import java.util.Collections;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(ProductController.class)
 class ProductControllerTest {
@@ -59,6 +63,15 @@ class ProductControllerTest {
 
         String location = mvcResult.getResponse().getHeader("Location");
         assertThat(location).isEqualTo("/v1/products/00000000-0000-007b-0000-0000000001c8");
+    }
+
+    @Test
+    void shouldReturnStatus200AndListOfProducts() throws Exception {
+        when(productsService.getAllProducts()).thenReturn(Collections.singletonList(product));
+
+        mockMvc.perform(get("/v1/products"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.length()", equalTo(1)));
     }
 
 }
