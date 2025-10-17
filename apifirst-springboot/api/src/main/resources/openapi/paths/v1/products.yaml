@@ -17,3 +17,18 @@ get:
         application/json:
           schema:
             $ref: '../../components/schemas/Problem.yaml'
+
+post:
+  summary: Create new product
+  description: New product
+  tags:
+    - Product
+  responses:
+    '201':
+      description: Created
+      headers:
+        Location:
+          description: Created product location
+          schema:
+            type: string
+            example: http://com.example/products{productUuid}
